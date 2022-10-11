@@ -11,6 +11,7 @@ import { AuthModule } from './auth/auth.module';
 import { UsersService } from './users/users.service';
 import { Login } from './login/entities/login.entity';
 import { ProductsModule } from './products/products.module';
+import { BillsModule } from './bills/bills.module';
 
 @Module({
   imports: [
@@ -21,6 +22,7 @@ import { ProductsModule } from './products/products.module';
     UsersModule,
     AuthModule,
     ProductsModule,
+    BillsModule,
   ],
   controllers: [AppController],
   providers: [AppService,UsersService],

@@ -22,7 +22,7 @@ export class ProductsService {
   }
   async readById(id): Promise<Product> {
     return await this.productModel.findById(id).exec();
-}
+  }
 
   update(id: number, updateProductDto: UpdateProductDto) {
     return `This action updates a #${id} product`;
