@@ -21,6 +21,10 @@ export class BillsService {
   findOne(id: number) {
     return `This action returns a #${id} bill`;
   }
+  async findByUsername(username: string) {
+    return await this.billModel.find({ username: username });
+  }
+
   async readById(id): Promise<Bill> {
     return await this.billModel.findById(id).exec();
   }

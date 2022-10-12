@@ -16,6 +16,8 @@ export class Bill {
   quantity: string;
   @Prop()
   address: string;
+  @Prop()
+  image: string;
   @Prop({unique:true})
   hash_bill: string;
 }

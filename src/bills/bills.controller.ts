@@ -16,14 +16,20 @@ export class BillsController {
   findAll() {
     return this.billsService.findAll();
   }
-  @Get('/:id')
-    async findById(@Res() response, @Param('id') id) {
-        const data = await this.billsService.readById(id);
+  // @Get('/:id')
+  //   async findById(@Res() response, @Param('id') id) {
+  //       const data = await this.billsService.readById(id);
+  //       return response.status(HttpStatus.OK).json({
+  //           data
+  //       })
+  //   }
+    @Get('/:username')
+    async findByUsername(@Res() response, @Param('username') username) {
+        const data = await this.billsService.findByUsername(username);
         return response.status(HttpStatus.OK).json({
             data
         })
     }
-
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.billsService.findOne(+id);
