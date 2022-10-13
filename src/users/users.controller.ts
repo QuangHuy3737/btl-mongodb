@@ -15,8 +15,6 @@ export class UsersController {
     newUser = await this.usersService.create(user);
     return response.status(HttpStatus.CREATED).json({
       newUser,
-      status: true,
     });
   }
-
 }
